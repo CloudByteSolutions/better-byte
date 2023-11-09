@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.1] (2023-11-09)
+### Bugs
+* Fixed remote extension bug
+
 ## [1.0.0] (2023-11-08)
 ### Features
 * Initial release to VSCode marketplace

@@ -3,7 +3,7 @@
     "displayName": "Better Byte",
     "icon": "icon.png",
     "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "cloudbyte",
     "author": {
         "name": "Adam Alaraj"
@@ -25,8 +25,8 @@
         "vscode": "^1.65.0"
     },
     "extensionKind": [
-        "workspace",
-        "ui"
+        "ui",
+        "workspace"
     ],
     "activationEvents": [
         "onStartupFinished"
