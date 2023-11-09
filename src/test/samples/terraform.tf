@@ -14,6 +14,7 @@ resource "aws_instance" "web" {
 
   connection {
     user = "root"
+    host = "dummy"
   }
 }
 

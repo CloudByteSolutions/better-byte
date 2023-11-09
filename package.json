@@ -3,7 +3,7 @@
     "displayName": "Better Byte",
     "icon": "icon.png",
     "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "cloudbyte",
     "author": {
         "name": "Adam Alaraj"
@@ -40,8 +40,8 @@
         "package": "vsce package",
         "publish": "vsce publish",
         "vscode:prepublish": "pnpm run compile && pnpm run package-web",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
+        "compile": "tsc -p .",
+        "watch": "tsc -watch -p .",
         "lint": "eslint --cache --max-warnings 0 \"{src,build}/**/*.{ts,js}\"",
         "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
         "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",
@@ -49,7 +49,7 @@
     },
     "contributes": {
         "configuration": {
-            "title": "Better Comments configuration",
+            "title": "Better Byte configuration",
             "properties": {
                 "better-byte.multilineComments": {
                     "type": "boolean",

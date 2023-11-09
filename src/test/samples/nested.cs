@@ -13,7 +13,7 @@ public class MyClass
     // * Available for public use
     public short MyProperty
     {
-        // TODO add some better comments
+        // TODO add some Better Byte
         get { return this.myProperty; }
 
         // ? should this value be transformed first?
@@ -52,7 +52,7 @@ public class MyClass
     // * Available for public use
     public short MyProperty
     {
-        // TODO add some better comments
+        // TODO add some Better Byte
         get { return this.myProperty; }
 
         // ? should this value be transformed first?
@@ -91,7 +91,7 @@ public class MyClass
     // * Available for public use
     public short MyProperty
     {
-        // TODO add some better comments
+        // TODO add some Better Byte
         get { return this.myProperty; }
 
         // ? should this value be transformed first?
@@ -130,7 +130,7 @@ public class MyClass
     // * Available for public use
     public short MyProperty
     {
-        // TODO add some better comments
+        // TODO add some Better Byte
         get { return this.myProperty; }
 
         // ? should this value be transformed first?
@@ -169,7 +169,7 @@ public class MyClass
     // * Available for public use
     public short MyProperty
     {
-        // TODO add some better comments
+        // TODO add some Better Byte
         get { return this.myProperty; }
 
         // ? should this value be transformed first?
@@ -208,7 +208,7 @@ public class MyClass
     // * Available for public use
     public short MyProperty
     {
-        // TODO add some better comments
+        // TODO add some Better Byte
         get { return this.myProperty; }
 
         // ? should this value be transformed first?

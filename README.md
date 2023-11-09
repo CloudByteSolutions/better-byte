@@ -1,7 +1,8 @@
-# Better Comments
+# Better Byte
 
-The Better Comments extension will help you create more human-friendly comments in your code.  
-With this extension, you will be able to categorise your annotations into:
+The Better Byte extension will help you create more human-friendly comments in your code.  
+With this extension, you will be able to categorize your annotations into:
+
 * Alerts
 * Queries
 * TODOs
