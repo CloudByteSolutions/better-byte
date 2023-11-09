@@ -1,23 +1,23 @@
 {
-    "name": "better-comments",
-    "displayName": "Better Comments",
+    "name": "better-byte",
+    "displayName": "Better Byte",
     "icon": "icon.png",
     "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-    "version": "3.0.2",
-    "publisher": "aaron-bond",
+    "version": "1.0.0",
+    "publisher": "cloudbyte",
     "author": {
-        "name": "Aaron Bond"
+        "name": "Adam Alaraj"
     },
-    "homepage": "https://github.com/aaron-bond/better-comments/blob/master/README.md",
+    "homepage": "https://github.com/CloudByteSolutions/better-byte/blob/master/README.md",
     "license": "SEE LICENSE IN LICENSE.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/aaron-bond/better-comments"
+        "url": "https://github.com/CloudByteSolutions/better-byte"
     },
     "sponsor": {
-        "url": "https://github.com/sponsors/aaron-bond"
+        "url": "https://github.com/sponsors/CloudByteSolutions"
     },
-    "bugs": "https://github.com/aaron-bond/better-comments/issues",
+    "bugs": "https://github.com/CloudByteSolutions/better-byte/issues",
     "categories": [
         "Formatters"
     ],
@@ -25,8 +25,8 @@
         "vscode": "^1.65.0"
     },
     "extensionKind": [
-        "ui",
-        "workspace"
+        "workspace",
+        "ui"
     ],
     "activationEvents": [
         "onStartupFinished"
@@ -38,7 +38,9 @@
     "browser": "./out/web/extension.js",
     "main": "./out/extension",
     "scripts": {
-        "vscode:prepublish": "npm run compile && npm run package-web",
+        "package": "vsce package",
+        "publish": "vsce publish",
+        "vscode:prepublish": "pnpm run compile && pnpm run package-web",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
         "lint": "tslint -c tslint.json 'src/**/*.ts'",
@@ -50,17 +52,17 @@
         "configuration": {
             "title": "Better Comments configuration",
             "properties": {
-                "better-comments.multilineComments": {
+                "better-byte.multilineComments": {
                     "type": "boolean",
                     "description": "Whether the multiline comment highlighter should be active",
                     "default": true
                 },
-                "better-comments.highlightPlainText": {
+                "better-byte.highlightPlainText": {
                     "type": "boolean",
                     "description": "Whether the plaintext comment highlighter should be active",
                     "default": false
                 },
-                "better-comments.tags": {
+                "better-byte.tags": {
                     "type": "array",
                     "description": "Tags which are used to color the comments. Changes require a restart of VS Code to take effect",
                     "default": [

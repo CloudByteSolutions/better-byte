@@ -7,7 +7,7 @@
 #    distribution, for details about the copyright.
 #
 
-# * adding some sample comments for better-comments
+# * adding some sample comments for better-byte
 when defined(gcc) and defined(windows):
   when defined(x86):
     {.link: "icons/nim.res".}
@@ -29,7 +29,7 @@ import
   extccomp, strutils, os, osproc, platform, main, parseopt, service,
   nodejs, scriptconfig, idents, modulegraphs
 
-# ? adding some sample comments for better-comments
+# ? adding some sample comments for better-byte
 when hasTinyCBackend:
   import tccgen
 
@@ -44,7 +44,7 @@ proc prependCurDir(f: string): string =
   else:
     result = f
 
-# ! adding some sample comments for better-comments
+# ! adding some sample comments for better-byte
 proc handleCmdLine(cache: IdentCache; config: ConfigRef) =
   if paramCount() == 0:
     writeCommandLineUsage()
@@ -117,7 +117,7 @@ proc handleCmdLine(cache: IdentCache; config: ConfigRef) =
           var ex = quoteShell(binPath)
           execExternalProgram(ex & ' ' & commands.arguments)
 
-# TODO adding some sample comments for better-comments
+# TODO adding some sample comments for better-byte
 when declared(GC_setMaxPause):
   GC_setMaxPause 2_000
 
@@ -126,7 +126,7 @@ when compileOption("gc", "v2") or compileOption("gc", "refc"):
   GC_disableMarkAndSweep()
 condsyms.initDefines()
 
-# // adding some sample comments for better-comments
+# // adding some sample comments for better-byte
 when not defined(selftest):
   handleCmdLine(newIdentCache(), newConfigRef())
   when declared(GC_setMaxPause):

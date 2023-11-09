@@ -9,26 +9,26 @@ With this extension, you will be able to categorise your annotations into:
 * Commented out code can also be styled to make it clear the code shouldn't be there
 * Any other comment styles you'd like can be specified in the settings
 
-![Annotated code](images/better-comments.PNG)
+![Annotated code](images/better-byte.png)
 
 ## Configuration
 
 This extension can be configured in User Settings or Workspace settings.
 
-`"better-comments.multilineComments": true`  
+`"better-byte.multilineComments": true`  
  This setting will control whether multiline comments are styled using the annotation tags.
  When false, multiline comments will be presented without decoration.
 
-`"better-comments.highlightPlainText": false`  
+`"better-byte.highlightPlainText": false`  
 This setting will control whether comments in a plain text file are styled using the annotation tags.
 When true, the tags (defaults: `! * ? //`) will be detected if they're the first character on a line.
 
-`better-comments.tags`  
+`better-byte.tags`  
 The tags are the characters or sequences used to mark a comment for decoration.
 The default 5 can be modified to change the colors, and more can be added.
 
 ```json
-"better-comments.tags": [
+"better-byte.tags": [
   {
     "tag": "!",
     "color": "#FF2D00",
