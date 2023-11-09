@@ -43,7 +43,7 @@
         "vscode:prepublish": "pnpm run compile && pnpm run package-web",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "lint": "tslint -c tslint.json 'src/**/*.ts'",
+        "lint": "eslint --cache --max-warnings 0 \"{src,build}/**/*.{ts,js}\"",
         "compile-web": "webpack --config ./build/web-extension.webpack.config.js",
         "watch-web": "webpack --watch --config ./build/web-extension.webpack.config.js",
         "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js"
