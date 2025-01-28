@@ -29,51 +29,87 @@ The default 5 can be modified to change the colors, and more can be added.
 
 ```json
 "better-byte.tags": [
-  {
-    "tag": "!",
-    "color": "#FF2D00",
-    "strikethrough": false,
-    "underline": false,
-    "backgroundColor": "transparent",
-    "bold": false,
-    "italic": false
-  },
-  {
-    "tag": "?",
-    "color": "#3498DB",
-    "strikethrough": false,
-    "underline": false,
-    "backgroundColor": "transparent",
-    "bold": false,
-    "italic": false
-  },
-  {
-    "tag": "//",
-    "color": "#474747",
-    "strikethrough": true,
-    "underline": false,
-    "backgroundColor": "transparent",
-    "bold": false,
-    "italic": false
-  },
-  {
-    "tag": "todo",
-    "color": "#FF8C00",
-    "strikethrough": false,
-    "underline": false,
-    "backgroundColor": "transparent",
-    "bold": false,
-    "italic": false
-  },
-  {
-    "tag": "*",
-    "color": "#98C379",
-    "strikethrough": false,
-    "underline": false,
-    "backgroundColor": "transparent",
-    "bold": false,
-    "italic": false
-  }
+    {
+        "tag": "!",
+        "color": "#FF2D00",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "?",
+        "color": "#3498DB",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "//",
+        "color": "#474747",
+        "strikethrough": true,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "TODO",
+        "color": "#FF8C00",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "*",
+        "color": "#28FF00",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "FIXME",
+        "color": "#000000",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "#FFCC00",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "HACK",
+        "color": "#000000",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "#FF8C00",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "BUG",
+        "color": "#000000",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "#FF2D00",
+        "bold": false,
+        "italic": false
+    },
+    {
+        "tag": "UNDONE",
+        "color": "#000000",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "#3498DB",
+        "bold": false,
+        "italic": false
+    },
 ]
 ```
 
