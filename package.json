@@ -93,7 +93,7 @@
                             "italic": false
                         },
                         {
-                            "tag": "todo",
+                            "tag": "TODO",
                             "color": "#FF8C00",
                             "strikethrough": false,
                             "underline": false,
@@ -103,13 +103,49 @@
                         },
                         {
                             "tag": "*",
-                            "color": "#98C379",
+                            "color": "#28FF00",
                             "strikethrough": false,
                             "underline": false,
                             "backgroundColor": "transparent",
                             "bold": false,
                             "italic": false
-                        }
+                        },
+                        {
+                            "tag": "FIXME",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#FFCC00",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "HACK",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#FF8C00",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "BUG",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#FF2D00",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "UNDONE",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#3498DB",
+                            "bold": false,
+                            "italic": false
+                        },
                     ]
                 }
             }
