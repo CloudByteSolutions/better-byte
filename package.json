@@ -3,7 +3,7 @@
     "displayName": "Better Byte",
     "icon": "icon.png",
     "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "cloudbyte",
     "author": {
         "name": "Adam Alaraj"
@@ -18,6 +18,68 @@
         "url": "https://github.com/sponsors/CloudByteSolutions"
     },
     "bugs": "https://github.com/CloudByteSolutions/better-byte/issues",
+    "keywords": [
+        "highlight",
+        "color",
+        "comment",
+        "comments",
+        "todo",
+        "todos",
+        "todo-list",
+        "todo-lists",
+        "devops",
+        "infrastructure",
+        "terraform",
+        "opentofu",
+        "yaml",
+        "json",
+        "dockerfile",
+        "kubernetes",
+        "helm",
+        "ansible",
+        "puppet",
+        "chef",
+        "powershell",
+        "bash",
+        "shell",
+        "python",
+        "javascript",
+        "typescript",
+        "hcl",
+        "groovy",
+        "ruby",
+        "go",
+        "rust",
+        "java",
+        "csharp",
+        "php",
+        "sql",
+        "markdown",
+        "asciidoc",
+        "xml",
+        "html",
+        "css",
+        "scss",
+        "less",
+        "sass",
+        "stylus",
+        "vue",
+        "react",
+        "angular",
+        "nodejs",
+        "docker",
+        "kubernetes",
+        "aws",
+        "azure",
+        "gcp",
+        "cloud",
+        "ci-cd",
+        "pipeline",
+        "automation",
+        "configuration",
+        "provisioning",
+        "deployment"
+    ],
     "categories": [
         "Formatters"
     ],
@@ -49,21 +111,6 @@
         "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js"
     },
     "contributes": {
-        "languages": [
-            {
-                "id": "solidity",
-                "extensions": [".sol"],
-                "aliases": ["Solidity"],
-                "configuration": "./language-configuration-solidity.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "solidity",
-                "scopeName": "source.solidity",
-                "path": "./syntaxes/solidity.tmLanguage.json"
-            }
-        ],
         "configuration": {
             "title": "Better Byte configuration",
             "properties": {

@@ -1,8 +1,13 @@
 # Change Log
 
+## [1.1.1] (2025-01-XX)
+### Improvements
+* **Enhanced marketplace presentation**: Updated README with emojis and better formatting for VS Code marketplace
+* **Improved extension compatibility**: Added `"ui"` to extensionKind for better Cursor.ai and other editor support
+* **Updated documentation**: Better visual hierarchy and professional appearance
+
 ## [1.1.0] (2025-01-XX)
 ### Features
-* **Solidity support**: Added full support for Solidity (`.sol`) files with syntax highlighting and comment configuration
 * **Dynamic language registration**: New `better-byte.languages` setting to specify which languages to enable comment highlighting for
 * **OpenTofu support**: Added support for OpenTofu files with the official OpenTofu VSCode extension
 * **Enhanced Remote-WSL compatibility**: Fixed comment highlighting issues in Remote-WSL environments for all languages
