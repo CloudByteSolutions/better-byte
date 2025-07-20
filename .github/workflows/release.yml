@@ -17,21 +17,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Read package.json INFO
         id: info
         uses: jaywcjlove/github-action-package@main
-
       - name: Debug version
         run: echo "version - ${{ steps.info.outputs.version }}"
-
       - name: Check if tag exists
         id: checkTag
         uses: mukunku/tag-exists-action@v1.4.0
         if: steps.info.outputs.version != ''
         with:
           tag: "v${{ steps.info.outputs.version }}"
-
       - name: Debug tag-exists
         run: echo "exists - ${{ steps.checkTag.outputs.exists }}"
 
@@ -41,27 +37,22 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 19
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
           run_install: false
-
       - name: Get pnpm store directory
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
@@ -69,29 +60,22 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-
       - name: Install dependencies
         run: pnpm install
-
       - name: Generate extension package
         run: pnpm vsce package
-
       - name: Publish extension to VS Code Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: pnpm vsce publish
-
-      - name: Install Open VSX publisher
-        run: npm install -g @openvsx/publish
-
-      - name: Publish extension to Open VSX
+      - name: Install Open VSX CLI
+        run: npm install -g ovsx
+      - name: Publish extension to Open VSX
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
-        run: open-vsx publish --pat $OVSX_PAT
-
+        run: ovsx publish --pat $OVSX_PAT
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: "v${{ needs.check.outputs.version }}"
           files: "*.vsix"
-          
