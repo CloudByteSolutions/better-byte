@@ -1,0 +1,80 @@
+{
+    "name": "Solidity",
+    "scopeName": "source.solidity",
+    "fileTypes": ["sol"],
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.solidity",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.solidity",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.solidity",
+                    "match": "\\b(if|else|for|while|do|break|continue|return|throw|try|catch|finally)\\b"
+                },
+                {
+                    "name": "keyword.other.solidity",
+                    "match": "\\b(contract|function|modifier|event|struct|enum|mapping|address|bool|string|int|uint|bytes|fixed|ufixed|var|public|private|internal|external|view|pure|payable|constant|immutable|override|virtual|abstract|interface|library|import|using|pragma|solidity|memory|storage|calldata)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.solidity",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.solidity",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.solidity",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.solidity",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.solidity",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        }
+    }
+} 

@@ -46,6 +46,19 @@ export async function activate(context: vscode.ExtensionContext) {
         configuration.UpdateLanguagesDefinitions();
     }, null, context.subscriptions);
 
+    // * Handle configuration changes
+    vscode.workspace.onDidChangeConfiguration(event => {
+        if (event.affectsConfiguration('better-byte.languages')) {
+            configuration.UpdateLanguagesDefinitions();
+            
+            // Re-initialize parser for current editor if it exists
+            if (activeEditor) {
+                parser.SetRegex(activeEditor.document.languageId);
+                triggerUpdateDecorations();
+            }
+        }
+    }, null, context.subscriptions);
+
     // * Handle active file changed
     vscode.window.onDidChangeActiveTextEditor(async editor => {
         if (editor) {

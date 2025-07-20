@@ -251,6 +251,7 @@ export class Parser {
             case "javascriptreact":
             case "typescript":
             case "typescriptreact":
+            case "solidity":
                 this.highlightJSDoc = true;
                 break;
 

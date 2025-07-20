@@ -3,7 +3,7 @@
     "displayName": "Better Byte",
     "icon": "icon.png",
     "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "publisher": "cloudbyte",
     "author": {
         "name": "Adam Alaraj"
@@ -25,7 +25,8 @@
         "vscode": "^1.65.0"
     },
     "extensionKind": [
-        "workspace"
+        "workspace",
+        "ui"
     ],
     "activationEvents": [
         "onStartupFinished"
@@ -48,9 +49,32 @@
         "package-web": "webpack --mode production --devtool hidden-source-map --config ./build/web-extension.webpack.config.js"
     },
     "contributes": {
+        "languages": [
+            {
+                "id": "solidity",
+                "extensions": [".sol"],
+                "aliases": ["Solidity"],
+                "configuration": "./language-configuration-solidity.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "solidity",
+                "scopeName": "source.solidity",
+                "path": "./syntaxes/solidity.tmLanguage.json"
+            }
+        ],
         "configuration": {
-            "title": "Better Comments configuration",
+            "title": "Better Byte configuration",
             "properties": {
+                "better-byte.languages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Array of language IDs to enable comment highlighting for. If empty, all installed language extensions will be used.",
+                    "default": []
+                },
                 "better-byte.multilineComments": {
                     "type": "boolean",
                     "description": "Whether the multiline comment highlighter should be active",
@@ -93,7 +117,7 @@
                             "italic": false
                         },
                         {
-                            "tag": "todo",
+                            "tag": "TODO",
                             "color": "#FF8C00",
                             "strikethrough": false,
                             "underline": false,
@@ -103,10 +127,46 @@
                         },
                         {
                             "tag": "*",
-                            "color": "#98C379",
+                            "color": "#28FF00",
                             "strikethrough": false,
                             "underline": false,
                             "backgroundColor": "transparent",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "FIXME",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#FFCC00",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "HACK",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#FF8C00",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "BUG",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#FF2D00",
+                            "bold": false,
+                            "italic": false
+                        },
+                        {
+                            "tag": "UNDONE",
+                            "color": "#000000",
+                            "strikethrough": false,
+                            "underline": false,
+                            "backgroundColor": "#3498DB",
                             "bold": false,
                             "italic": false
                         }

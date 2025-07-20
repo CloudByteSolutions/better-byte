@@ -22,14 +22,35 @@ export class Configuration {
     public UpdateLanguagesDefinitions() {
         this.commentConfig.clear();
 
-        for (let extension of vscode.extensions.all) {
-            let packageJSON = extension.packageJSON;
+        // Get configured languages from settings
+        const config = vscode.workspace.getConfiguration('better-byte');
+        const configuredLanguages = config.get<string[]>('languages') || [];
 
-            if (packageJSON.contributes && packageJSON.contributes.languages) {
-                for (let language of packageJSON.contributes.languages) {
-                    if (language.configuration) {
-                        let configPath = path.join(extension.extensionPath, language.configuration);
-                        this.languageConfigFiles.set(language.id, configPath);
+        // If specific languages are configured, only use those
+        if (configuredLanguages.length > 0) {
+            for (let extension of vscode.extensions.all) {
+                let packageJSON = extension.packageJSON;
+
+                if (packageJSON.contributes && packageJSON.contributes.languages) {
+                    for (let language of packageJSON.contributes.languages) {
+                        if (configuredLanguages.includes(language.id) && language.configuration) {
+                            let configPath = path.join(extension.extensionPath, language.configuration);
+                            this.languageConfigFiles.set(language.id, configPath);
+                        }
+                    }
+                }
+            }
+        } else {
+            // Use all available language extensions (default behavior)
+            for (let extension of vscode.extensions.all) {
+                let packageJSON = extension.packageJSON;
+
+                if (packageJSON.contributes && packageJSON.contributes.languages) {
+                    for (let language of packageJSON.contributes.languages) {
+                        if (language.configuration) {
+                            let configPath = path.join(extension.extensionPath, language.configuration);
+                            this.languageConfigFiles.set(language.id, configPath);
+                        }
                     }
                 }
             }

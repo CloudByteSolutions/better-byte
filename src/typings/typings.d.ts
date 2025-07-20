@@ -6,6 +6,7 @@ interface CommentTag {
 }
 
 interface Contributions {
+    languages: string[];
     multilineComments: boolean;
     useJSDocStyle: boolean;
     highlightPlainText: boolean;
