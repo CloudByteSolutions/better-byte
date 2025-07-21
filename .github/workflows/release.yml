@@ -43,7 +43,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 20
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
@@ -51,8 +51,7 @@ jobs:
           run_install: false
       - name: Get pnpm store directory
         shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
@@ -68,9 +67,10 @@ jobs:
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: pnpm vsce publish
-      - name: Install Open VSX CLI
+        continue-on-error: true
+      - name: Install Open VSX CLI
         run: npm install -g ovsx
-      - name: Publish extension to Open VSX
+      - name: Publish extension to Open VSX
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
         run: ovsx publish --pat $OVSX_PAT

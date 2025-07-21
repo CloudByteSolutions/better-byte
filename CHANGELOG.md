@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.2.0] (2025-01-XX)
+### Features
+* **OpenVSC support**: Added compatibility with OpenVSC marketplace and editor
+
 ## [1.1.1] (2025-01-XX)
 ### Improvements
 * **Enhanced marketplace presentation**: Updated README with emojis and better formatting for VS Code marketplace
