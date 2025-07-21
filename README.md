@@ -10,7 +10,7 @@
 - **FIXME** (yellow background) - Issues that need fixing
 - **HACK** (orange background) - Temporary workarounds
 - **BUG** (red background) - Known bugs and issues
-- **UNDONE** (blue background) - Things to be removed/reverted
+- **UNDO** (blue background) - Things to be removed/reverted
 - **Commented-out code** (gray strikethrough) - Code that you're scared to delete
 
 **Works with:** OpenTofu, YAML, JSON, Python, Terraform, TypeScript, and 50+ other languages.
@@ -89,7 +89,7 @@ You can configure Better Byte in User or Workspace settings.
     "backgroundColor": "#FF2D00"
   },
   {
-    "tag": "UNDONE",
+                "tag": "UNDO",
     "color": "#000000",
     "backgroundColor": "#3498DB"
   }

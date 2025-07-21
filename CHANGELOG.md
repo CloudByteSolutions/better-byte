@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.2.1] (2025-01-XX)
+### Changes
+* **Tag name update**: Changed "UNDONE" tag to "UNDO" for more concise naming
+* **Documentation updates**: Updated README, CHANGELOG, and CONTRIBUTING files to reflect the tag name change
+
 ## [1.2.0] (2025-01-XX)
 ### Features
 * **OpenVSC support**: Added compatibility with OpenVSC marketplace and editor
@@ -21,12 +26,12 @@
 ### Improvements
 * **Language discovery**: Extension now automatically discovers and supports all installed language extensions
 * **Performance**: Improved language registration efficiency with dynamic configuration updates
-* **Enhanced tag set**: Added FIXME, HACK, BUG, UNDONE tags with background colors for better visibility (contributed by [@IgerNolan](https://github.com/IgerNolan))
+* **Enhanced tag set**: Added FIXME, HACK, BUG, UNDO tags with background colors for better visibility (contributed by [@IgerNolan](https://github.com/IgerNolan))
 
 ### Configuration
 * Added `better-byte.languages` setting (array of language IDs, empty for all languages)
 * Updated configuration title to "Better Byte configuration"
-* Updated default tags: TODO (uppercase), FIXME, HACK, BUG, UNDONE with background colors (contributed by [@IgerNolan](https://github.com/IgerNolan))
+* Updated default tags: TODO (uppercase), FIXME, HACK, BUG, UNDO with background colors (contributed by [@IgerNolan](https://github.com/IgerNolan))
 
 ### Documentation
 * Updated README with comprehensive feature list and configuration examples

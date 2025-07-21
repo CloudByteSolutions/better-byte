@@ -3,7 +3,7 @@
     "displayName": "Better Byte",
     "icon": "icon.png",
     "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "publisher": "cloudbyte",
     "author": {
         "name": "Adam Alaraj"
@@ -209,7 +209,7 @@
                             "italic": false
                         },
                         {
-                            "tag": "UNDONE",
+                            "tag": "UNDO",
                             "color": "#000000",
                             "strikethrough": false,
                             "underline": false,

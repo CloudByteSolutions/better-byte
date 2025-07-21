@@ -147,7 +147,7 @@ Create test files in different languages to verify functionality:
  * FIXME: The resource naming convention needs standardization
  * HACK: Temporary workaround for provider version issue
  * BUG: This module has known issues with nested loops
- * UNDONE: Remove debug outputs before production
+ * UNDO: Remove debug outputs before production
  */
 
 variable "project_name" {
@@ -165,7 +165,7 @@ locals {
     Project     = var.project_name
     Environment = var.environment
     ManagedBy   = "terraform"
-    #UNDONE: Add cost center tag after approval
+    #UNDO: Add cost center tag after approval
   }
   
   #BUG: This calculation might overflow for large numbers
